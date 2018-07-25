@@ -778,7 +778,8 @@ namespace GingerCore.Actions
                             Reporter.ToUser(eUserMsgKeys.ExcelBadWhereClause);
                             break;
                         default:
-                            MessageBox.Show(ex.Message);
+                            
+                            Reporter.ToUser(eUserMsgKeys.GeneralErrorOccured, ex.Message);
                             break;
                     }
                     return null;
